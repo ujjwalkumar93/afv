@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{breed_code}-{####}",
+ "creation": "2022-02-08 16:52:54.775841",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name",
+  "mobile_no",
+  "column_break_3",
+  "gender",
+  "email",
+  "patient",
+  "address_details_section",
+  "country",
+  "country_code",
+  "state",
+  "column_break_11",
+  "state_code",
+  "city",
+  "pin_code",
+  "pet_breed_section",
+  "breed",
+  "breed_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mobile No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Email"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "address_details_section",
+   "fieldtype": "Section Break",
+   "label": "Address Details"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "pin_code",
+   "fieldtype": "Int",
+   "label": "Pin Code"
+  },
+  {
+   "fetch_from": "country.country_code",
+   "fieldname": "country_code",
+   "fieldtype": "Data",
+   "label": "Country Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "state.state_code",
+   "fieldname": "state_code",
+   "fieldtype": "Data",
+   "label": "State Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pet_breed_section",
+   "fieldtype": "Section Break",
+   "label": "Pet Breed"
+  },
+  {
+   "fieldname": "breed",
+   "fieldtype": "Link",
+   "label": "Breed",
+   "options": "Breed"
+  },
+  {
+   "fetch_from": "breed.breed_code",
+   "fieldname": "breed_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Breed Code",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Patient",
+   "link_fieldname": "pet_parent"
+  }
+ ],
+ "modified": "2022-02-09 12:13:26.159297",
+ "modified_by": "Administrator",
+ "module": "Askforvets",
+ "name": "Pet Parent",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "full_name,mobile_no",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "full_name"
+}

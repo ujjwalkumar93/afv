@@ -1,0 +1,288 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{country_code}{state_code}{animal_id}{breed_code}{pet_sequence}{owner_id}",
+ "creation": "2022-02-01 17:40:46.141686",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pet_parent_section",
+  "pet_parent",
+  "pet_section",
+  "pet_photo",
+  "pet_name",
+  "column_break_20",
+  "patient_id",
+  "section_break_22",
+  "pet_type",
+  "date_of_birth",
+  "adopted_on",
+  "spay_neutered",
+  "column_break_27",
+  "breed",
+  "weight",
+  "microchip_no",
+  "location_of_chipping",
+  "column_break_32",
+  "pet_gender",
+  "colour",
+  "date_of_chipping",
+  "insurance",
+  "allergies_medical_and_surgical_history_section",
+  "allergies",
+  "medication",
+  "column_break_26",
+  "medical_history",
+  "surgical_history",
+  "section_break_37",
+  "pet_notes",
+  "id_genrator_section",
+  "country_code",
+  "state_code",
+  "animal_id",
+  "column_break_29",
+  "breed_code",
+  "pet_sequence",
+  "owner_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "pet_parent_section",
+   "fieldtype": "Section Break",
+   "label": "Pet Parent"
+  },
+  {
+   "fieldname": "pet_section",
+   "fieldtype": "Section Break",
+   "label": "Pet"
+  },
+  {
+   "fieldname": "pet_photo",
+   "fieldtype": "Attach Image",
+   "in_preview": 1,
+   "label": "Pet Photo",
+   "options": "image"
+  },
+  {
+   "fieldname": "pet_name",
+   "fieldtype": "Data",
+   "label": "Pet's Name"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient_id",
+   "fieldtype": "Data",
+   "label": "Patient ID"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pet_type",
+   "fieldtype": "Link",
+   "label": "Pet's Type",
+   "options": "Pet Type"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "adopted_on",
+   "fieldtype": "Date",
+   "label": "Adopted on"
+  },
+  {
+   "fieldname": "spay_neutered",
+   "fieldtype": "Select",
+   "label": "Spay Neutered",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "breed",
+   "fieldtype": "Link",
+   "label": "Breed",
+   "options": "Breed"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "microchip_no",
+   "fieldtype": "Data",
+   "label": "Microchip No"
+  },
+  {
+   "fieldname": "location_of_chipping",
+   "fieldtype": "Data",
+   "label": "Location of Chipping"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pet_gender",
+   "fieldtype": "Select",
+   "label": "Pet's Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "colour",
+   "fieldtype": "Select",
+   "label": "Colour",
+   "options": "Black\nBrown"
+  },
+  {
+   "fieldname": "date_of_chipping",
+   "fieldtype": "Date",
+   "label": "Date Of Chipping"
+  },
+  {
+   "fieldname": "insurance",
+   "fieldtype": "Select",
+   "label": "Insurance",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "section_break_37",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pet_notes",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  },
+  {
+   "fieldname": "pet_parent",
+   "fieldtype": "Link",
+   "label": "Pet Parent",
+   "options": "Pet Parent"
+  },
+  {
+   "fieldname": "id_genrator_section",
+   "fieldtype": "Section Break",
+   "label": "ID Genrator"
+  },
+  {
+   "fetch_from": "pet_parent.country_code",
+   "fieldname": "country_code",
+   "fieldtype": "Data",
+   "label": "Country Code"
+  },
+  {
+   "fetch_from": "pet_parent.state_code",
+   "fieldname": "state_code",
+   "fieldtype": "Data",
+   "label": "State Code"
+  },
+  {
+   "fetch_from": "pet_type.animal_id",
+   "fieldname": "animal_id",
+   "fieldtype": "Data",
+   "label": "Animal ID"
+  },
+  {
+   "fetch_from": "breed.breed_code",
+   "fieldname": "breed_code",
+   "fieldtype": "Data",
+   "label": "Breed Code"
+  },
+  {
+   "fetch_from": "pet_parent.name",
+   "fieldname": "owner_id",
+   "fieldtype": "Data",
+   "label": "Owner ID"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "allergies_medical_and_surgical_history_section",
+   "fieldtype": "Section Break",
+   "label": "Allergies, Medical and Surgical History"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Small Text",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "medication",
+   "fieldtype": "Small Text",
+   "label": "Medication"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "medical_history",
+   "fieldtype": "Small Text",
+   "label": "Medical History"
+  },
+  {
+   "fieldname": "surgical_history",
+   "fieldtype": "Small Text",
+   "label": "Surgical History"
+  },
+  {
+   "fieldname": "pet_sequence",
+   "fieldtype": "Data",
+   "label": "Pet Sequence"
+  }
+ ],
+ "image_field": "pet_photo",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Appointment",
+   "link_fieldname": "patient"
+  },
+  {
+   "link_doctype": "Vaccination",
+   "link_fieldname": "patient"
+  }
+ ],
+ "modified": "2022-02-09 13:19:45.350005",
+ "modified_by": "Administrator",
+ "module": "Askforvets",
+ "name": "Patient",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "pet_name",
+ "track_changes": 1
+}

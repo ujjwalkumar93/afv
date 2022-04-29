@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:LAB-TST-",
+ "creation": "2022-02-08 15:25:11.894982",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "pet_name",
+  "appointment_type",
+  "lab_type",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Pet Parent ID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "pet_name",
+   "fieldtype": "Data",
+   "label": "Pet Name"
+  },
+  {
+   "fieldname": "appointment_type",
+   "fieldtype": "Data",
+   "label": "Appointment Type"
+  },
+  {
+   "fieldname": "lab_type",
+   "fieldtype": "Select",
+   "label": "Lab Type",
+   "options": "Blood Test"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-08 15:39:13.359506",
+ "modified_by": "Administrator",
+ "module": "Askforvets",
+ "name": "Lab Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,171 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-02-01 17:57:46.642573",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_1",
+  "pet_photo",
+  "pet_parent",
+  "patient",
+  "section_break_3",
+  "pet_name",
+  "breed",
+  "status",
+  "column_break_8",
+  "pet_type",
+  "practitioner_details_section",
+  "practitioner",
+  "appointment_type",
+  "column_break_15",
+  "appointment_date",
+  "time",
+  "section_break_14",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Pet ID",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "Pet Info"
+  },
+  {
+   "fetch_from": "patient.pet_name",
+   "fetch_if_empty": 1,
+   "fieldname": "pet_name",
+   "fieldtype": "Data",
+   "label": "Pet's Name"
+  },
+  {
+   "fetch_from": "patient.breed",
+   "fetch_if_empty": 1,
+   "fieldname": "breed",
+   "fieldtype": "Link",
+   "label": "Breed",
+   "options": "Breed"
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nOpen\nClosed"
+  },
+  {
+   "fieldname": "appointment_type",
+   "fieldtype": "Select",
+   "label": "Appointment Type",
+   "options": "SURGERY\nVISIT"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.pet_type",
+   "fetch_if_empty": 1,
+   "fieldname": "pet_type",
+   "fieldtype": "Data",
+   "label": "Pet's Type"
+  },
+  {
+   "default": "Today",
+   "fieldname": "appointment_date",
+   "fieldtype": "Date",
+   "label": "Appointment Date"
+  },
+  {
+   "bold": 1,
+   "fieldname": "practitioner",
+   "fieldtype": "Link",
+   "in_preview": 1,
+   "label": "Doctor Name",
+   "options": "Practitioner"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "APP-.MM.-.###"
+  },
+  {
+   "fieldname": "pet_parent",
+   "fieldtype": "Link",
+   "label": "Pet's Parent Name",
+   "options": "Pet Parent"
+  },
+  {
+   "fieldname": "practitioner_details_section",
+   "fieldtype": "Section Break",
+   "label": "Practitioner Details"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.pet_photo",
+   "fieldname": "pet_photo",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Pet Photo",
+   "options": "image"
+  }
+ ],
+ "image_field": "pet_photo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-09 13:31:54.658134",
+ "modified_by": "Administrator",
+ "module": "Askforvets",
+ "name": "Appointment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

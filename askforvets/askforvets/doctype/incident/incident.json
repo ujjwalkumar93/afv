@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-02-01 18:08:57.021379",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date_of_incident",
+  "column_break_3",
+  "time_of_incident",
+  "section_break_5",
+  "case_type",
+  "incident_reported_to",
+  "patient",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "INC-.MM.-####"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date_of_incident",
+   "fieldtype": "Date",
+   "label": "Date of Incident"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time_of_incident",
+   "fieldtype": "Time",
+   "label": "Time Of Incident"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "case_type",
+   "fieldtype": "Select",
+   "label": "Case Type",
+   "options": "--Select Case Type--"
+  },
+  {
+   "fieldname": "incident_reported_to",
+   "fieldtype": "Data",
+   "label": "Incident Reported To"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Data",
+   "label": "Patient Impacted"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-08 16:49:13.250981",
+ "modified_by": "Administrator",
+ "module": "Askforvets",
+ "name": "Incident",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

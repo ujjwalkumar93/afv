@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{medicine}-{type}",
+ "creation": "2022-02-25 19:36:08.274960",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "medicine_details_section",
+  "medicine",
+  "salts",
+  "type",
+  "composition",
+  "column_break_5",
+  "brand",
+  "doses",
+  "presentation"
+ ],
+ "fields": [
+  {
+   "fieldname": "medicine",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Medicine"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "--Select Medicine Type--\nInjection\nSyrup\nTablet"
+  },
+  {
+   "fieldname": "composition",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Composition"
+  },
+  {
+   "fieldname": "doses",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Doses"
+  },
+  {
+   "fieldname": "presentation",
+   "fieldtype": "Data",
+   "label": "Presentation"
+  },
+  {
+   "fieldname": "medicine_details_section",
+   "fieldtype": "Section Break",
+   "label": "Medicine Details"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salts",
+   "fieldtype": "Link",
+   "label": "Salts",
+   "options": "Salts"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Brand",
+   "options": "Brand"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-25 19:46:33.415733",
+ "modified_by": "Administrator",
+ "module": "Askforvets",
+ "name": "Medicine",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

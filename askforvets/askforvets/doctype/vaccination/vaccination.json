@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-02-09 13:07:20.835133",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "pet_photo",
+  "vaccination_details_section",
+  "vaccination_date",
+  "column_break_4",
+  "vaccination_time",
+  "pet_details_section",
+  "patient",
+  "pet_name",
+  "pet_parent"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "VACC-.MM.-.YY.-"
+  },
+  {
+   "default": "Today",
+   "fieldname": "vaccination_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Vaccination Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "vaccination_time",
+   "fieldtype": "Time",
+   "label": "Vaccination Time"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Pet ID",
+   "options": "Patient"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "pet_details_section",
+   "fieldtype": "Section Break",
+   "label": "Pet Details"
+  },
+  {
+   "fetch_from": "patient.pet_name",
+   "fetch_if_empty": 1,
+   "fieldname": "pet_name",
+   "fieldtype": "Data",
+   "label": "Pet Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.pet_parent",
+   "fetch_if_empty": 1,
+   "fieldname": "pet_parent",
+   "fieldtype": "Data",
+   "label": "Pet Parent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vaccination_details_section",
+   "fieldtype": "Section Break",
+   "label": "Vaccination Details"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.pet_photo",
+   "fetch_if_empty": 1,
+   "fieldname": "pet_photo",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Pet Photo",
+   "options": "image"
+  }
+ ],
+ "image_field": "pet_photo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-09 13:24:09.264531",
+ "modified_by": "Administrator",
+ "module": "Askforvets",
+ "name": "Vaccination",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
