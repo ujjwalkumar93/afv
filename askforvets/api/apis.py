@@ -45,3 +45,17 @@ class Appointment():
 		appointments = frappe.db.sql(query,as_dict=True)
 		return appointments
 
+
+class User():
+	def get_user_detail(self,user=None):
+		
+		query = "select * from `tabUser`"
+
+		if user:
+			
+			conditions = f" where name = '{user}' "
+			
+			query = query + conditions
+
+		user = frappe.db.sql(query,as_dict=True)
+		return user
